@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería de Sueños Epóxicos</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra superior de redes -->
+  <div class="announcement">
+    <div class="wrap">
+      <div class="socials socials--mini">
+        <a href="https://www.instagram.com/gse1292/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61581341013898" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@TU_USUARIO" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="annMsg">
+        <span class="chev">‹</span>
+        <span>"Bienvenido a la Galería de Sueños Epóxicos GSE"</span>
+        <span class="chev">›</span>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="wrap header">
+      <a class="logo" href="#">
+        <img class="brandLogo" src="logo original 2.png" alt="Logo Galería de Sueños Epóxicos">
+        <div>
+          <strong>Galería de Sueños Epóxicos</strong>
+          <div class="badge">Ilumina tus ideas</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="principal">
+        <a href="#cat">Categorías</a>
+        <a href="#videos">Videos</a>
+        <a href="#cupon">Cupón</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="right">
+        <select class="currency" aria-label="Moneda y país">
+          <option>MXN $ | México</option>
+          <option>USD $ | USA</option>
+          <option>EUR € | Europa</option>
+        </select>
+
+        <!-- Carrito en header -->
+        <button class="headerCart" id="headerCart" aria-label="Carrito">
+          <span class="cartIcon">🛒</span>
+          <span class="cartCount" id="cartCount">0</span>
+        </button>
+<!-- Botón vaciar carrito -->
+        <button id="clearCartBtn" class="btn secondary" type="button">Vaciar carrito</button>
+
+        <button class="menuBtn" id="openMenu">Menú</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="heroGradient"></div>
+    <div class="heroInner wrap heroSplit">
+      <div class="heroCol heroLogoCol">
+       <div class="heroLogoWrap">
+  <img class="heroLogo" id="heroLogo" src="logo original 2.png" alt="Logo Galería de Sueños Epóxicos">
+</div>
+
+
+      </div>
+      <div class="heroCol heroCopy">
+        <h1>
+          Bienvenido a la
+          <strong>Galería de Sueños Epóxicos</strong>
+          <span>Cuadros de Resina y Letreros de Neón</span>
+        </h1>
+        <p>Transforma tus ideas en arte luminoso. Diseños personalizados con resina y neón para dar vida a tus espacios.</p>
+        <div class="ctaRow">
+          <button class="btn">Desde $599</button>
+          <a class="btn secondary" href="#cupon">Obtener cupón</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mira-trabajo">
+  <h2>Mira cómo trabajamos</h2>
+  <div class="video-row">
+    <video controls>
+      <source src="bienvenida.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <video controls>
+      <source src="proceso1.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <video controls>
+      <source src="proceso 2.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <video controls>
+      <source src="final.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+  </div>
+</section>
+
+<style>
+.mira-trabajo {
+  text-align: center;
+  padding: 20px;
+}
+
+.video-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.video-row video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain; /* Mantiene proporciones originales */
+  background: #000;   /* Fondo negro cuando no llena todo el espacio */
+}
+</style>
+
+<style>
+.mira-trabajo {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--surface); /* ← Fondo original */
+  border-radius: 12px;
+}
+
+.mira-trabajo h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--text); /* para contraste */
+}
+
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-row video {
+  width: 220px;   /* formato tipo reel */
+  height: 390px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+</style>
+
+
+  <!-- Categorías (4 en una fila con enlaces) -->
+  <section id="cat" class="categorias">
+    <div class="wrap">
+      <h2>CATEGORÍAS 😎</h2>
+      <div class="catGrid catRow">
+        <div class="catCard">
+          <a class="cardLink" href="categoria-impulsa-tu-negocio.html" title="Ver categoría Impulsa tu negocio">
+            <img loading="lazy" src="https://picsum.photos/400/300?random=50" alt="Impulsa tu negocio">
+          </a>
+          <h3>Impulsa tu negocio</h3>
+          <p>Letreros que dan visibilidad</p>
+          <span>$2,550 MXN</span>
+        </div>
+        <div class="catCard">
+          <a class="cardLink" href="categoria-ofertones.html" title="Ver categoría Ofertones">
+            <img loading="lazy" src="https://picsum.photos/400/300?random=51" alt="Ofertones">
+          </a>
+          <h3>OFERTONES!!</h3>
+          <p>Diseños únicos en promoción</p>
+          <span>$1,999 MXN</span>
+        </div>
+        <div class="catCard">
+          <a class="cardLink" href="categoria-logos-acrilico.html" title="Ver categoría Logos de Acrílico">
+            <img loading="lazy" src="https://picsum.photos/400/300?random=52" alt="Logos de Acrílico">
+          </a>
+          <h3>Logos de Acrílico</h3>
+          <p>Profesionalismo y estilo</p>
+          <span>$3,200 MXN</span>
+        </div>
+        <div class="catCard">
+          <a class="cardLink" href="categoria-para-bar.html" title="Ver categoría Para BAR">
+            <img loading="lazy" src="https://picsum.photos/400/300?random=53" alt="Para Bar">
+          </a>
+          <h3>Para BAR</h3>
+          <p>Ambiente con luz y estilo</p>
+          <span>$2,100 MXN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Catálogo (4 arriba y 3 abajo) -->
+<section id="catalogo" class="categorias" aria-label="Catálogo">
+  <div class="wrap">
+    <h2>CATÁLOGO ⭐</h2>
+    <div class="catGrid twoRows">
+
+
+      <!-- Producto 1 -->
+      <div class="catCard">
+        <a class="cardLink" href="index2.html" title="Panel Ojos Anime">
+          <img loading="lazy" src="anime.PNG" alt="Panel Ojos Anime">
+        </a>
+        <h3>Panel Ojos Anime</h3>
+        <p>Multi-panel épico</p>
+        <span>$2,800 MXN</span>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="catCard">
+        <a class="cardLink" href="index3.html" title="Vegito Blue">
+          <img loading="lazy" src="fut.PNG" alt="Messi vs CR7">
+        </a>
+        <h3>Messi vs CR7</h3>
+        <p>Los rivales mas grandes del fut</p>
+        <span>$3,100 MXN</span>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="catCard">
+        <a class="cardLink" href="index4.html" title="Tío Rico — Cash Flow">
+          <img loading="lazy" src="pato.PNG" alt="Tío Rico — Cash Flow">
+        </a>
+        <h3>Tío Rico — Cash Flow</h3>
+        <p>Pop art con crypto vibes</p>
+        <span>$2,700 MXN</span>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="catCard">
+        <a class="cardLink" href="index5.html" title="GREW">
+          <img loading="lazy" src="otro.PNG" alt="Lana Del Rey — Ultraviolence">
+        </a>
+        <h3>GREW — Ultraviolence</h3>
+        <p>Monocromático</p>
+        <span>$2,300 MXN</span>
+      </div>
+
+      <!-- 🔽 Segunda fila (3 productos) -->
+      <!-- Producto 5 -->
+      <div class="catCard">
+        <a class="cardLink" href="index6.html" title="Naruto Sage Mode">
+          <img loading="lazy" src="eva.jpeg" alt="Naruto Sage Mode">
+        </a>
+        <h3>"EVA 01"</h3>
+        <p>Poder y Misterio</p>
+        <span>$2,900 MXN</span>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="catCard">
+        <a class="cardLink" href="index7.html" title="Goku Ultra Instinct">
+          <img loading="lazy" src="tony.jpeg" alt="Goku Ultra Instinct">
+        </a>
+        <h3>"Tony Montana"</h3>
+        <p>SCARFACE</p>
+        <span>$3,400 MXN</span>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="catCard">
+        <a class="cardLink" href="index8.html" title="One Piece — Luffy Gear 5">
+          <img loading="lazy" src="bakugo.jpeg" alt="One Piece — Luffy Gear 5">
+        </a>
+        <h3>"BAKUGO"</h3>
+        <p>My Hero Academy</p>
+        <span>$3,000 MXN</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Sección CUPÓN (usa mismo backend de Apps Script) -->
+  <section id="cupon" class="cuponSec">
+    <div class="wrap cuponWrap">
+      <div class="cuponCopy">
+        <h2>🎁 Obtén tu cupón de descuento</h2>
+        <p>Deja tu correo y recibe un cupón para tu próxima compra.</p>
+        <div class="newsletter">
+          <input id="cuponEmail" class="input" type="email" placeholder="Correo electrónico" required />
+          <button id="btnCupon" class="btn" type="button">Quiero mi cupón</button>
+        </div>
+        <p id="cuponMsg" class="cuponMsg" role="status" aria-live="polite"></p>
+      </div>
+      <div class="cuponCard">
+        <div class="cuponInner">
+          <span class="small">CUPÓN</span>
+          <strong id="cuponCode">—</strong>
+          <span class="muted">Se enviará a tu correo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <div class="wrap">
+      <h2>Para estar al día ingresa tu correo y síguenos en redes sociales</h2>
+
+      <!-- Newsletter con IDs que usa tu Apps Script -->
+      <div class="newsletter">
+        <input id="email" class="input" type="email" placeholder="Correo electrónico" required />
+        <button id="btnSeguirShop" class="btn" type="button">Seguir en shop</button>
+      </div>
+
+      <p style="text-align:center;color:#dfe3fb;opacity:.9;margin:8px 0">
+        Síguenos en nuestras redes sociales:
+      </p>
+      <div class="socials">
+        <a href="https://www.instagram.com/gse1292/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61581341013898" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@TU_USUARIO" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <div class="payRow">
+        <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="PayPal">
+        <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+        <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="MasterCard">
+        <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="Apple Pay">
+        <img loading="lazy" src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Google Pay">
+      </div>
+
+      <div class="regionRow">
+        <label for="regionSel">País/región</label>
+        <select id="regionSel" class="regionSelect">
+          <option>MXN $ | México</option>
+          <option>USD $ | Estados Unidos</option>
+          <option>EUR € | Europa</option>
+        </select>
+      </div>
+
+      <div class="legal">
+        <span>© 2025, Galería de Sueños Epóxicos</span>
+        <span>·</span>
+        <a href="#">Política de reembolso</a>
+        <span>·</span>
+        <a href="#">Política de privacidad</a>
+        <span>·</span>
+        <a href="#">Términos del servicio</a>
+        <span>·</span>
+        <a href="#">Política de envío</a>
+        <span>·</span>
+        <a href="#">Información de contacto</a>
+      </div>
+      <small style="display:block;margin-top:16px;color:var(--muted)">© 2025, Galería de Sueños Epóxicos — Políticas, términos y contacto (demo).</small>
+    </div>
+  </footer>
+
+  <!-- Chat box -->
+  <div class="chatBox">
+    <h4>Habla con nosotros</h4>
+    <p>Hola! cotiza con nosotros y te daremos precio especial y <b>ENVÍO GRATIS</b> 📦</p>
+    <button id="openMiniChat">Contáctanos 💬</button>
+    <div style="margin-top:10px">
+      <strong>Respuestas inmediatas</strong>
+      <div><a href="#" style="color:var(--accent)">Hacer seguimiento de mi envío</a></div>
+    </div>
+  </div>
+
+  <!-- Mini chat (demo) -->
+  <div id="miniChat" class="miniChat" aria-hidden="true">
+    <header>
+      <span>Chat — Galería de Sueños Epóxicos</span>
+      <button id="closeMiniChat" style="background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer">✕</button>
+    </header>
+    <div id="chatBody" class="body"></div>
+    <div class="inputRow">
+      <textarea id="msgText" placeholder="Escribe tu mensaje o toma notas (demo)..."></textarea>
+      <button id="sendMsg" class="send">Enviar</button>
+    </div>
+    <small>Demo: no envía mensajes reales. Úsalo como mini block de notas o chat de prueba.</small>
+  </div>
+
+  <!-- FAB WhatsApp (general) -->
+  <a class="waFab" target="_blank"
+     href="https://wa.me/524428688377?text=Hola%20GSE%2C%20quiero%20cotizar%20un%20cuadro%20%F0%9F%92%A1">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

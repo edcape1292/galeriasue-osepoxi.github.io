@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería — Ojos de Anime</title>
+  <meta name="theme-color" content="#0b0b12">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="nav-left">
+        <img src="logo original 2.png" alt="Logo de la galería" loading="lazy">
+        <a href="index.html" class="pill"><i class="fa-solid fa-home"></i> Galería</a>
+      </div>
+      <div class="cart-icon" id="cartBtn" aria-label="Abrir carrito" title="Carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- DETALLE PRINCIPAL -->
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <a class="media" href="#" id="openLightbox" aria-label="Ampliar imagen del cuadro" role="button">
+          <!-- Usa el nombre EXACTO del archivo: anime.PNG (o cambia aquí si es .png) -->
+          <img id="mainImage" src="otro.PNG" alt="Cuadro de resina con collage de ojos estilo anime (acabado espejo)" loading="lazy">
+        </a>
+      </div>
+
+      <div class="content">
+        <h1>Cuadro de Resina: Gris KAWS</h1>
+        <p class="subtitle">Inspirado en la cultura pop y el arte contemporáneo, este cuadro en resina captura la esencia del icónico KAWS Anatomy. Con detalles nítidos y un acabado brillante, es una pieza que mezcla rebeldía, creatividad y modernidad. Perfecto para amantes del arte urbano.</p>
+
+        <div class="grid">
+          <div class="list">
+            <div class="row"><span class="dot"></span> 60 × 40 × 3 cm</div>
+            <div class="row"><span class="dot"></span> Peso aprox.: 2.1 kg</div>
+            <div class="row"><span class="dot"></span> Montaje: herrajes, listo para colgar</div>
+          </div>
+          <div class="list">
+            <div class="row"><span class="dot"></span> Resina epóxica artística</div>
+            <div class="row"><span class="dot"></span> Pigmentos y tintas alcohol</div>
+            <div class="row"><span class="dot"></span> Base MDF sellada + acabado UV</div>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Opciones de personalización">
+          <select id="medida" aria-label="Medida">
+            <option value="60 × 40 × 3 cm" selected>60 × 40 × 3 cm</option>
+            <option value="80 × 50 × 3 cm">80 × 50 × 3 cm</option>
+            <option value="90 × 60 × 3 cm">90 × 60 × 3 cm</option>
+          </select>
+          <select id="color" aria-label="Color base">
+            <option value="Negro" selected>Negro</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Grafito">Grafito</option>
+          </select>
+          <select id="acabado" aria-label="Acabado">
+            <option value="Brillante" selected>Brillante</option>
+            <option value="Mate">Mate</option>
+          </select>
+        </div>
+
+        <div class="price" id="priceTag" aria-live="polite">$2,800 MXN</div>
+
+        <div class="actions">
+          <button class="btn whatsapp" id="btnCotizar"><i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp</button>
+          <button class="btn cart" id="btnAddCart"><i class="fa-solid fa-cart-plus"></i> Agregar al carrito</button>
+        </div>
+        <p class="note">Las imágenes son ilustrativas; cada pieza es única.</p>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DEMO -->
+    <section class="catalog">
+      <h2>Otros productos</h2>
+      <!-- NUEVO: barra de acciones -->
+  <div class="catalog-toolbar">
+    <button id="addSelectedBtn"><i class="fa-solid fa-cart-plus"></i> Agregar seleccionados</button>
+  </div>
+      <div class="grid-cards" id="catalogGrid"></div>
+    </section>
+  </main>
+
+  <!-- NEWSLETTER -->
+  <section class="nl">
+    <div class="wrap">
+      <h2 class="title-nl">Para estar al día ingresa tu correo y síguenos en redes sociales</h2>
+      <div class="form">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <button class="shop-btn" id="btnSeguirShop">Seguir en shop</button>
+      </div>
+
+  <p style="text-align:center;color:#dfe3fb;opacity:.9;margin:8px 0">
+  Síguenos en nuestras redes sociales:
+</p>
+<div class="socials">
+  <a href="https://www.instagram.com/gse1292/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61581341013898" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://www.youtube.com/@TU_USUARIO" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+
+      <div class="payments" aria-label="Métodos de pago">
+        <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
+        <i class="fa-brands fa-cc-visa" title="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+        <i class="fa-solid fa-wallet" title="Billetera"></i>
+      </div>
+
+      <div class="country">
+        <span>País/región</span>
+        <select id="countrySelect" aria-label="País o región">
+          <option value="MXN" selected>MXN $ | México</option>
+          <option value="USD">USD $ | Estados Unidos</option>
+          <option value="EUR">EUR € | Europa</option>
+          <option value="ARS">ARS $ | Argentina</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="policy">
+        <a href="#">Política de reembolso</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos del servicio</a>
+        <a href="#">Política de envío</a>
+        <a href="#">Información de contacto</a>
+      </div>
+      <p>© 2025, Galería de Sueños Epóxicos</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX (overlay DIV, botón Salir) -->
+  <div id="lightbox" class="overlay" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Salir">&times;</button>
+    <img class="lb-img" id="lbImg" alt="Vista ampliada del cuadro">
+  </div>
+
+  <!-- PANEL CARRITO -->
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrito">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-cart-shopping"></i> Carrito</h3>
+      <button class="close-cart" id="closeCart"><i class="fa-solid fa-xmark"></i> Cerrar</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-line"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      <div class="cart-actions">
+        <button class="btn-outline" id="clearCart"><i class="fa-solid fa-trash-can"></i> Vaciar</button>
+        <button class="btn-primary" id="checkout"><i class="fa-solid fa-cash-register"></i> Cotizar todo</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="app4.js"></script>
+</body>
+</html>

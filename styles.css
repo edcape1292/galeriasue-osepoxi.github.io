@@ -1,0 +1,307 @@
+:root{
+  --bg:#0b0c10;
+  --card:#13151b;
+  --muted:#9aa3af;
+  --accent:#00e5f0;
+  --accent2:#f72585;
+  --brand:#ffd60a;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --ring:0 0 0 3px rgba(255,214,10,.28);
+
+  /* Escala compacta */
+  --fs-base:15px;
+  --fs-sm:13px;
+  --fs-lg:18px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:#fff;font-family:Montserrat,system-ui,Arial;font-size:var(--fs-base);line-height:1.45}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+
+/* Announcement (compacto) */
+.announcement{position:sticky;top:0;z-index:60;background:#0f1117;border-bottom:1px solid rgba(255,255,255,.06)}
+.announcement .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:32px;padding:0 14px}
+.annMsg{display:flex;gap:8px;align-items:center;justify-content:center;color:#e5e7eb;font-weight:800;letter-spacing:.2px;font-size:var(--fs-sm)}
+.annMsg .chev{opacity:.55}
+
+/* Redes sociales */
+.socials{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;margin:6px 0 12px}
+.socials a{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:#0b0c10;border:1px solid rgba(255,255,255,.12);box-shadow:0 2px 8px rgba(0,0,0,.28);transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+.socials i{font-size:14px;opacity:.9}
+.socials a:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.35);border-color:rgba(255,255,255,.22)}
+.socials--mini a{width:24px;height:24px}
+.socials--mini i{font-size:12px}
+.socials a[aria-label="Instagram"]:hover{ box-shadow:0 0 0 3px rgba(225,48,108,.22), 0 6px 16px rgba(225,48,108,.25) }
+.socials a[aria-label="Facebook"]:hover { box-shadow:0 0 0 3px rgba(24,119,242,.22), 0 6px 16px rgba(24,119,242,.25) }
+.socials a[aria-label="TikTok"]:hover   { box-shadow:0 0 0 3px rgba(0,242,254,.22), 0 6px 16px rgba(0,242,254,.25) }
+.socials a[aria-label="YouTube"]:hover  { box-shadow:0 0 0 3px rgba(255,0,0,.22),   0 6px 16px rgba(255,0,0,.25) }
+
+/* Topbar */
+.topbar{position:sticky;top:32px;z-index:50;background:rgba(11,12,16,.65);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+.wrap{max-width:1100px;margin:auto;padding:0 16px}
+.header{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;gap:10px;align-items:center}
+.brandLogo{height:38px;width:auto;border-radius:10px;filter:drop-shadow(0 0 6px rgba(0,242,254,.35)) drop-shadow(0 0 10px rgba(247,37,133,.2))}
+@media (max-width:640px){.brandLogo{height:32px}}
+.nav{display:flex;gap:18px;align-items:center;font-size:var(--fs-sm)}
+.nav a{opacity:.9}
+.nav a:hover{opacity:1}
+.badge{padding:2px 6px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:11px;color:#cbd5e1}
+.right{display:flex;align-items:center;gap:10px}
+.currency{appearance:none;background:#0f1117;border:1px solid rgba(255,255,255,.12);color:#fff;border-radius:10px;padding:7px 10px;font-size:var(--fs-sm)}
+.menuBtn{display:none}
+
+/* Header Cart */
+.headerCart{
+  position:relative;
+  background:#0f1117;
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  border-radius:12px;
+  padding:8px 10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+}
+.headerCart .cartIcon{font-size:16px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+.cartCount{
+  min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#22c55e;color:#071b0f;
+  display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;
+  transition:transform .18s ease;
+}
+.cartCount.bump{animation:bump .32s ease}
+@keyframes bump{
+  0%{transform:scale(1)}
+  30%{transform:scale(1.25)}
+  60%{transform:scale(0.95)}
+  100%{transform:scale(1)}
+}
+
+/* Hero */
+.hero{position:relative;min-height:58vh;display:grid;place-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://picsum.photos/1600/900?blur=2') center/cover no-repeat;filter:brightness(.42)}
+.heroGradient{position:absolute;inset:0;background:
+  radial-gradient(70% 50% at 20% 80%,rgba(0,242,254,.22),transparent 60%),
+  radial-gradient(60% 40% at 80% 10%,rgba(247,37,133,.18),transparent 60%)}
+.heroInner{position:relative;z-index:2;text-align:center;padding:42px 16px}
+.heroInner.heroSplit{display:grid;grid-template-columns:minmax(260px,420px) 1fr;align-items:center;gap:28px;text-align:left}
+.hero h1{font-size:clamp(26px,4.8vw,52px);line-height:1.05;margin:0 0 6px;font-weight:900;text-transform:uppercase}
+.hero h1 span{display:block;font-size:clamp(18px,2.6vw,22px);font-weight:700;color:#00e5f0}
+.hero p{margin:6px auto 20px;max-width:680px;color:#d1d5db;font-size:var(--fs-sm)}
+.ctaRow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--brand);color:#111;padding:11px 14px;border-radius:10px;border:0;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(255,214,10,.18);font-size:var(--fs-sm)}
+.btn.secondary{background:#111;color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn:hover{box-shadow:var(--ring)}
+.hero h1 strong{display:block;font-size:clamp(22px,4.2vw,44px);color:var(--accent2);margin-top:8px}
+
+/* Hero logo anim */
+.heroLogo{width:100%;max-width:420px;height:auto;margin-inline:auto;filter:drop-shadow(0 0 10px rgba(0,242,254,.30)) drop-shadow(0 0 14px rgba(247,37,133,.20));animation:popIn .9s ease-out, glowPulse 4s ease-in-out infinite 1s;opacity:0;transition:opacity .6s ease}
+.heroLogo.show{opacity:1}
+.heroLogoWrap{position:relative;display:grid;place-items:center}
+.heroLogoWrap::after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(120deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%);transform:translateX(-140%) skewX(-14deg);mix-blend-mode:screen;filter:blur(.5px);animation:sweep 5.5s ease-in-out 1.2s infinite}
+@keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 10px rgba(0,242,254,.3)) drop-shadow(0 0 14px rgba(247,37,133,.2))}50%{filter:drop-shadow(0 0 16px rgba(0,242,254,.48)) drop-shadow(0 0 22px rgba(247,37,133,.32))}}
+@keyframes popIn{0%{opacity:0;transform:scale(.88) rotate(-1deg)}60%{opacity:1;transform:scale(1.03) rotate(0)}100%{transform:scale(1)}}
+@keyframes sweep{0%{transform:translateX(-140%) skewX(-14deg)}50%{transform:translateX(140%) skewX(-14deg)}100%{transform:translateX(140%) skewX(-14deg)}}
+@media (max-width:900px){.heroInner.heroSplit{grid-template-columns:1fr;text-align:center}.heroLogo{max-width:300px}}
+@media (prefers-reduced-motion: reduce){.heroLogo,.heroLogoWrap::after{animation:none}}
+
+/* Galería de videos */
+.videos{background:#111;padding:28px 0}
+.videos h2{font-size:22px;margin-bottom:14px;text-align:center}
+.videoSlider{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px}
+.videoSlider::-webkit-scrollbar{height:6px}
+.videoSlider::-webkit-scrollbar-thumb{background:#222;border-radius:999px}
+.videoCard{flex:0 0 auto;width:210px;background:#000;border-radius:10px;overflow:hidden;scroll-snap-align:start;position:relative}
+.videoCard::after{content:"▶";position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:rgba(255,255,255,.85)}
+.videoCard img{transition:transform .28s cubic-bezier(.2,.65,.2,1)}
+.videoCard:hover img{transform:scale(1.04)}
+
+/* Categorías / Catálogo */
+.categorias{background:#0f1117;padding:32px 0}
+.categorias h2{text-align:center;font-size:24px;margin-bottom:22px}
+
+/* 1 sola fila (scroll horizontal en pantallas chicas) */
+.catGrid{display:grid;gap:16px}
+.catRow{
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px,1fr);  /* 1.7x: cards más anchas */
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+@media (min-width:1100px){
+  .catRow{grid-auto-columns:1fr;}
+}
+
+.catCard{background:#13151b;border-radius:var(--radius);overflow:hidden;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.35);display:flex;flex-direction:column;position:relative;cursor:pointer;transition:transform .22s ease, box-shadow .22s ease}
+.catCard:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,.45)}
+.cardLink{display:block}
+
+/* Imágenes 1.7x más grandes */
+.catCard img{
+  width:100%;
+  height:clamp(289px,36vw,374px);
+  object-fit:contain;
+  background:#0b0c10;
+  padding:8px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:transform .28s cubic-bezier(.2,.65,.2,1), filter .28s;
+}
+.catCard:hover img{transform:scale(1.04)}
+.catCard h3{margin:10px 0 4px;font-size:16px}
+.catCard p{margin:0 0 8px;color:var(--muted);font-size:var(--fs-sm)}
+.catCard span{display:block;margin-bottom:10px;font-weight:700;color:var(--brand);font-size:var(--fs-sm)}
+
+/* Acciones en tarjetas (WhatsApp + Add) */
+.cardActions{position:static;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;opacity:1;max-height:none;padding:10px;margin:0 10px 10px;border-top:1px solid rgba(255,255,255,.06)}
+.btnAction{background:#0f1117;border:1px solid rgba(255,255,255,.18);color:#fff;padding:8px 12px;border-radius:10px;font-weight:800;cursor:pointer;font-size:var(--fs-sm);transition:transform .12s ease, box-shadow .12s ease}
+.btnAction:hover{box-shadow:var(--ring);transform:translateY(-1px)}
+.btnAction.whats{background:#25d366;color:#0b0c10;border-color:transparent}
+
+/* "Añadir al carrito" con gradiente y estado "added" */
+.btnAction.add{
+  background: linear-gradient(135deg,#8b5cf6 0%, #22d3ee 100%);
+  border-color: transparent;
+  color:#ffffff;
+  box-shadow: 0 8px 18px rgba(139,92,246,.28), 0 4px 10px rgba(34,211,238,.18);
+}
+.btnAction.add:hover{
+  box-shadow: 0 0 0 3px rgba(139,92,246,.25), 0 10px 24px rgba(34,211,238,.28);
+}
+.btnAction.add.added{
+  background: linear-gradient(135deg,#22c55e 0%, #16a34a 100%);
+  box-shadow: 0 8px 18px rgba(34,197,94,.28), 0 4px 10px rgba(22,163,74,.18);
+  color:#071b0f;
+}
+
+/* Selección accesible */
+.catCard.selected{outline:2px solid var(--brand);box-shadow:0 12px 24px rgba(0,0,0,.46),0 0 0 4px rgba(255,214,10,.16)}
+.catCard:focus-visible{outline:2px solid var(--brand)}
+@media (prefers-reduced-motion: reduce){.catCard,.catCard img,.videoCard img{transition:none}}
+
+/* Cupón */
+.cuponSec{background:#111;padding:32px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.cuponWrap{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
+@media (max-width:900px){.cuponWrap{grid-template-columns:1fr}}
+.cuponCopy h2{margin:0 0 6px;font-size:22px}
+.cuponMsg{margin:8px 0 0;color:#e5e7eb;font-size:var(--fs-sm)}
+.newsletter{display:flex;gap:8px;flex-wrap:wrap;margin:0 auto 14px;justify-content:center;max-width:560px}
+.input{flex:1;min-width:220px;background:#0f1117;border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:10px;padding:10px;font-size:var(--fs-sm)}
+.cuponCard{display:grid;place-items:center}
+.cuponInner{background:linear-gradient(135deg,#1b1f2a,#0f1117);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px 22px;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.38)}
+.cuponInner .small{font-size:11px;color:#cbd5e1;letter-spacing:2px}
+.cuponInner strong{display:block;font-size:24px;margin:6px 0;color:var(--brand)}
+.cuponInner .muted{color:#9aa3af;font-size:11px}
+
+/* Footer */
+footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0;background:#0f1117;text-align:center}
+.payRow{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;justify-content:center;align-items:center;opacity:.92}
+.payRow img{height:28px;object-fit:contain}
+
+/* Región / Legal */
+.regionRow{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:18px}
+.regionRow label{color:#e5e7eb;font-size:var(--fs-sm)}
+.regionSelect{appearance:none;background:#0f1117;border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:10px;padding:8px 10px;min-width:200px;font-size:var(--fs-sm)}
+.legal{margin-top:10px;color:var(--muted);font-size:12px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.legal a{color:var(--muted)}
+
+/* Chat */
+.chatBox{position:fixed;right:18px;bottom:18px;background:#111;color:#fff;border-radius:12px;padding:14px;box-shadow:0 4px 16px rgba(0,0,0,.5);max-width:280px}
+.chatBox h4{margin:0 0 6px;font-size:var(--fs-lg)}
+.chatBox button{margin-top:8px;background:var(--brand);border:0;padding:9px 11px;border-radius:10px;font-weight:800;cursor:pointer;font-size:var(--fs-sm)}
+
+/* Mini chat */
+.miniChat{position:fixed;right:18px;bottom:86px;width:300px;background:#0f1117;border:1px solid rgba(255,255,255,.08);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.6);display:none}
+.miniChat.open{display:block}
+.miniChat header{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:700;font-size:var(--fs-sm)}
+.miniChat .body{padding:10px;height:180px;overflow-y:auto;background:#0b0c10;border-bottom:1px solid rgba(255,255,255,.08)}
+.miniChat .msg{margin:6px 0;line-height:1.35;font-size:var(--fs-sm)}
+.miniChat .inputRow{display:flex;gap:8px;padding:8px}
+.miniChat textarea{flex:1;background:#0b0c10;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:8px;min-height:38px;resize:vertical;font-size:var(--fs-sm)}
+.miniChat .send{background:var(--accent);color:#000;border:0;border-radius:8px;padding:8px 10px;font-weight:800;cursor:pointer;font-size:var(--fs-sm)}
+.miniChat small{display:block;color:#9aa3af;padding:0 10px 10px;font-size:11px}
+
+/* FAB WhatsApp (general) */
+.waFab{position:fixed;right:18px;bottom:18px;z-index:80;display:grid;place-items:center;width:52px;height:52px;border-radius:999px;background:#25d366;box-shadow:0 10px 22px rgba(0,0,0,.32)}
+.waFab img{width:26px;height:26px;filter:invert(1)}
+.waFab:hover{transform:translateY(-2px)}
+
+/* Toast carrito */
+.toastCart{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(18px);background:#111;border:1px solid rgba(255,255,255,.12);padding:9px 12px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.5);opacity:0;color:#fff;z-index:1000;transition:opacity .22s, transform .22s;font-size:var(--fs-sm)}
+.toastCart.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ============ Catálogo en 2 filas: 4 arriba + 3 abajo ============ */
+.catGrid.twoRows{
+  /* Anulamos el modo "una sola fila horizontal" de .catRow */
+  grid-auto-flow: initial;
+  grid-auto-columns: initial;
+  overflow-x: visible;
+
+  /* Definimos grilla de 4 columnas en escritorio */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px){
+  .catGrid.twoRows{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .catGrid.twoRows{ grid-template-columns: 1fr; }
+}
+
+/* ===================== OVERRIDES (FONDO FIJO + TRANSLÚCIDO + GIRO LOGO) ===================== */
+
+/* Fondo fijo en toda la página */
+html, body {
+  background: url("fondo6.jpg") center/cover no-repeat fixed !important;
+}
+
+/* Quita la imagen del hero y deja un velo oscuro para legibilidad */
+.hero::before{
+  background: rgba(0,0,0,.42) !important;
+  filter: none !important;
+}
+
+/* Secciones translúcidas para que se vea el fondo */
+.announcement { background: rgba(15,17,23,.85) !important; }
+.videos       { background: rgba(17,17,17,.78) !important; }
+.categorias   { background: rgba(15,17,23,.78) !important; }
+.cuponSec     { background: rgba(17,17,17,.78) !important; }
+footer        { background: rgba(15,17,23,.85) !important; }
+
+/* Giro del logo cuando JS añade .rotate (sin duplicados) */
+.heroLogo {
+  transition: transform 1s ease, opacity 1s ease;
+}
+.heroLogo.rotate {
+  transform: rotateY(360deg);
+  opacity: 0.4;
+}
+/* ====== ROTACIÓN DEL LOGO (SIEMPRE LEGIBLE) ====== */
+.heroLogo{
+  opacity: 1 !important;                /* que nunca se haga transparente */
+  transition: transform 0.8s ease;      /* giro suave */
+  will-change: transform;
+}
+.heroLogo.spin {
+  animation: spinY 0.8s ease both;      /* clase temporal durante el giro */
+}
+@keyframes spinY {
+  0%   { transform: rotateY(0deg); }
+  49%  { transform: rotateY(89deg); }   /* justo antes de voltear */
+  50%  { transform: rotateY(90deg); }   /* aquí cambiamos la imagen por JS */
+  100% { transform: rotateY(360deg); }  /* termina el giro */
+}
+#clearCartBtn {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+:root {
+  --surface: rgba(21,26,46,.85); 
+  --surface-2: rgba(21,26,46,.85);
+}
