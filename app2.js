@@ -22,7 +22,7 @@ const CATALOG = [
     id:"p2",
     name:"Messi y CR7",
     price_mxn:3900,
-    img:"fut.png",
+    img:"fut2.png",
     page:"index3.html" // ← Foto 1 abre index3.html
   },
   {
@@ -310,3 +310,4 @@ document.getElementById('btnSeguirShop')?.addEventListener('click', async ()=>{
 /* ===== Init ===== */
 function init(){ renderCatalog(); refreshMainPrice(); loadCart(); }
 init();
+
